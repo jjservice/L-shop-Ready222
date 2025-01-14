@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Cancelled</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right,black,darkblue,maroon,black);
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgb(245, 245, 245);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #dc3545;
+        }
+
+        .cancel-message {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #dc3545; /* Red color for error */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+
+        .button:hover {
+            transform: scale(1.10);
+            transition: 0.5s;
+            background-color: rgb(76, 76, 235);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cancel-message">
+            <div class="icon">&#10060;</div> <!-- Red Cross Icon -->
+            <h1>Payment Cancelled</h1>
+            <p>Your payment has been cancelled. Please try again or contact support for assistance.</p>
+            <a href="index.html" class="button">Home</a>
+        </div>
+    </div>
+</body>
+</html>

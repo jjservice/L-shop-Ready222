@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background: linear-gradient(to right,black,darkblue,maroon,black);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .container {
+            margin: 0% auto;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.623);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 95%;
+            box-shadow: 0px 2px 6px yellowgreen;
+        }
+
+        .success-message {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #28a745; /* Green color for success */
+            margin-bottom: 20px;
+        }
+        h1{
+            color: white;
+            text-shadow: 2px 2px 4px gold;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            color: beige; 
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.10);
+            transition: 0.5s;
+            background-color: green;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+            margin: 0% auto;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.623);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 95%;
+            box-shadow: 0px 2px 6px yellowgreen;
+        }
+        .container {
+            width: 500px;
+        }
+
+        .success-message {
+            width: 500px;
+            
+        }
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-message">
+            <div class="icon">&#10004;</div> <!-- Green Checkmark -->
+            <h1>Payment Successful!</h1>
+            <p>Your payment has been successfully processed. Thank you for your purchase.</p>
+            <a href="index.html" class="button">Home</a>
+        </div>
+    </div>
+
+    <!-- Audio element for success sound -->
+    <audio id="success-sound" src="./Tada! sound effect.mp3" preload="auto"></audio>
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('success-sound');
+            audio.play(); // Play sound when the page is loaded
+        }
+    </script>
+</body>
+</html>
