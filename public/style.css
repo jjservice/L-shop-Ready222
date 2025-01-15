@@ -254,13 +254,58 @@ padding: 10px;
   box-shadow: 0px 2px 6px lightskyblue;
   padding: 10px;
   z-index: 100;
-
   color: white;
   display: inline;
   list-style-type: none;
   border: 1px solid rgba(135, 206, 250, 0.842);
   overflow-y: auto;
 }
+
+
+.cart-container::-webkit-scrollbar{
+  width: 15px;
+  height: 0px;
+  background-color: transparent;
+  border: none;
+  transition: 1s ease-in-out;
+}
+body.lightPlayer .cart-container::-webkit-scrollbar{
+ border: none;
+ transition: 1s ease-in-out;
+}
+.cart-container::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+.cart-container::-webkit-scrollbar-thumb{
+  background-color: rgba(0, 0, 0, 0.596);
+  border: 1px solid lightskyblue;
+  border-radius: 50px;
+  transition: 1s ease-in-out;
+}
+body.lightPlayer .cart-container::-webkit-scrollbar-thumb{
+  background-color: rgba(0, 0, 0, 0.596);
+  border: 1px solid rgba(153, 205, 50, 0.781);
+  border-radius: 50%;
+  transition: 1s ease-in-out;
+}
+
+.cart-container::-webkit-scrollbar-thumb:hover{
+  background-color: rgba(0, 0, 255, 0.425);
+  border: 2px solid  lightskyblue;
+  
+}
+body.lightPlayer .cart-container::-webkit-scrollbar-thumb:hover{
+  background-color: rgba(146, 11, 90, 0.596);
+  border: 2px solid  yellowgreen;
+  transition: 1s ease-in-out;
+}
+
+
+
+
+
+
 #cart-items input{
   margin: 0% auto;
   max-width: 15%;
