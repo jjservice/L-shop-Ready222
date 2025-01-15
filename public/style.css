@@ -146,25 +146,28 @@ width: 100%;
 #Icon-Search-Footer{
   background:transparent;
   border: none;
-  width: 15%;
-  padding: 5px;
+  width: 100%;
   margin-right: 5px;
-  color: yellow;
-  text-shadow: 2px 2px 4px darkblue;
+  color: rgb(158, 136, 11);
+  text-shadow: 0px 0px 4px goldenrod;
   cursor: pointer;
-  border-bottom: 2px solid rgba(135, 206, 250, 0.548);
-  border-radius: 8px;
+  
+
 }
 #Icon-Search-Footer i{
   margin: 0% auto;
   font-size: 25px;
   cursor: pointer;
   transition: 0.5s;
-  color: rgba(184, 13, 64, 0.479);
-  text-shadow: 1px 1px 2px rgba(218, 165, 32, 0.589);
+  
+  border-bottom: 2px solid rgba(135, 206, 250, 0.548);
+  width: 40px;
+  border-radius: 8px;
+  padding: 5px;
   
 }
 #Icon-Search-Footer:hover{
+  color: rgba(255, 255, 0, 0.842);
   transform: scale(1.10);
   transition: 0.5s;
 }
@@ -182,7 +185,7 @@ transition: 1s ease-out;
 margin: 0% auto;
 display: flex;
 position: relative;
-width: 20px;
+width: 30px;
 padding: 5px 10px;
 margin: 5px;
 align-items: center;
@@ -190,30 +193,46 @@ text-align: center;
 justify-content: center;
 font-family: Georgia, 'Times New Roman', Times, serif;
 font-size: 14px;
-color: rgba(180, 153, 1, 0.904);
+
 margin-bottom: 2px;
 border-radius: 6px;
-background-color: rgba(255, 255, 255, 0.13);
-color: wheat;
-border: 1px solid rgba(135, 206, 250, 0.863);
-text-shadow: 1px 1px 2px yellowgreen;
+background-color: transparent;
+border: 1px solid rgba(135, 206, 250, 0.5);
+color: whitesmoke;
+text-shadow: 2px 2px 4px gold;
 cursor: pointer;
 transition: 1s;
 }
 body.lightStore #language-select{
   background-color: rgba(0, 0, 139, 0.616);
 }
+#language-select option{
+  color: white;
+  text-shadow: 2px 2px 4px gold;
+  background-color: rgba(0, 0, 0, 0.925);
+}
 
 #voice-search-btn{
 margin: 0% auto;
+margin-right: 3%;
+margin-left: 1%;
+display: flex;
 background-color: transparent;
 border-radius: 0px;
 border: none;
-border-left: 2px solid rgba(135, 206, 250, 0.589);
+padding: 2px 4px;
+border-bottom: 2px solid rgba(135, 206, 250, 0.589);
 cursor: pointer;
 font-size: 24px;
 color: blue;
 text-shadow: 0px 2px 4px lightskyblue;
+border-radius: 8px;
+}
+
+#voice-search-btn:hover{
+  transform: scale(1.10);
+  transition: 0.5s;
+  box-shadow: 0px 2px 6px lightskyblue;
 }
 
 body.lightStore #voice-search-btn{
@@ -250,9 +269,14 @@ transition: 0.5s;
   gap: 10px;
 }
 .Footer-Title{
-  font-size: 16px;
+  font-size: 20px;
   color: rgba(90, 67, 8, 0.884);
   text-shadow: 1px 1px 2px goldenrod;
+  border-left: 1px solid rgba(135, 206, 250, 0.438);
+  border-right: 1px solid rgba(135, 206, 250, 0.438);
+  border-radius: 100%;
+  box-shadow: 0px 2px 6px rgba(135, 206, 250, 0.445);
+  padding: 0px 10px;
 }
 body.lightStore #search-bar:focus{
 background-color: rgba(119, 0, 0, 0.267);
@@ -1749,18 +1773,25 @@ label {
   }
   summary{
     font-size: 30px;
+    top: 70px;
   }
 
   #Icon-Search-Footer{
     width: 100%;
   }
-
-  
-
+  #Icon-Search-Footer i{
+    width: 50px;
+    font-size: 30px;
+  }
+  #language-select{
+  width: 40px;
 }
 
+#HideShow-Btn{
+  top: 70px;
+}
 
-
+}
   
 
   

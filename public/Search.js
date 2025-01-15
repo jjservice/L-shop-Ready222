@@ -33,7 +33,6 @@
           // Set the initial language (default to English)
           recognition.lang = languageSelect.value;
           
-          // Initialize sound for notification
           let sound = new Audio('Cut-Voice-Notification-Sound.mp3'); // Path to your notification sound file
           
           // Listen for language change and update the language of recognition
