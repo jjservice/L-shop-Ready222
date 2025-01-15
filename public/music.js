@@ -119,6 +119,11 @@ audioPlayer.addEventListener("ended", () => {
 // Initialize the player with the first track
 updateTrack();
 
+
+
+
+
+
 // Function to render the track list
 function renderTrackList(filteredTracks = tracks) {
     trackList.innerHTML = ''; // Clear previous list
@@ -142,6 +147,7 @@ function renderTrackList(filteredTracks = tracks) {
 // Initial render of the track list
 renderTrackList();
 
+
 // Search input event listener for filtering tracks
 searchInput.addEventListener('input', function() {
     const searchQuery = searchInput.value.toLowerCase();
@@ -150,4 +156,25 @@ searchInput.addEventListener('input', function() {
         track.artist.toLowerCase().includes(searchQuery)
     );
     renderTrackList(filteredTracks); // Re-render the track list with the filtered tracks
+});
+
+
+
+
+
+// Get the progress bar element
+const progressBar = document.getElementById("progressBar");
+
+// Update progress bar as audio plays
+audioPlayer.addEventListener("timeupdate", () => {
+    if (audioPlayer.duration > 0) {
+        const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        progressBar.value = progress;
+    }
+});
+
+// Allow the user to click on the progress bar to seek
+progressBar.addEventListener("input", () => {
+    const seekTime = (progressBar.value / 100) * audioPlayer.duration;
+    audioPlayer.currentTime = seekTime;
 });

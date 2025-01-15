@@ -1711,9 +1711,57 @@ label {
 
 
 
+  .progress-container {
+    margin: 0% auto;
+    width: 80%;
+    margin-top: 5px;
+    position: relative;
+}
 
+  #progressBar {
+    width: 100%;
+    height: 15px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border-radius: 10px;
+    outline: none;
+    transition: background 0.3s ease;
+    box-shadow: 0px 2px 6px rgba(135, 206, 250, 0.432);
+    margin-bottom: 10px;
+  
+}
 
+/* Style the thumb of the progress bar */
+#progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: transparent;
+    border: 1px solid rgba(255, 217, 0, 0.856);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background-color: #3b83f667;
+}
 
+#progressBar::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3b83f6cb;
+    cursor: pointer;
+}
+
+/* Change the progress bar appearance on hover */
+#progressBar:hover {
+    background: rgba(0, 0, 0, 0.932);
+}
+
+#progressBar:active {
+    background: rgba(0, 0, 0, 0.938);
+}
 
 
 
