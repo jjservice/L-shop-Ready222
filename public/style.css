@@ -32,7 +32,7 @@ h1{
   border-radius: 100%;
   border: 6px solid rgba(245, 245, 245, 0.089);
   box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.781);
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   cursor: pointer;
   transition: 1s;
  
@@ -81,15 +81,18 @@ h3{
 }
 
 
-.nav-info{
+.footer-nav{
 margin: 0% auto;
+display: flex;
+justify-content: center;
 align-items: center;
 text-align:  center;
 margin-bottom: 15px;
 opacity: 90%;
+width: 100%;
 transition: 1s ease-in;
 }
-.nav-info a{
+.footer-nav a{
 text-decoration: none;
 text-align: center;
 align-items: center;
@@ -104,21 +107,41 @@ box-shadow: 0px 2px 0px rgba(135, 206, 250, 0.815);
 padding: 5px 10px;
 margin: 5px;
 border-radius: 10px;
-}
-
-body.lightStore .nav-info a:hover{
-border-bottom: 8px solid palevioletred;
-transition: 0.5s;
-
+width: 100%;
 }
 
 
-.nav-info a:hover{
-border-bottom: 8px solid palevioletred;
-transition: 0.5s;
 
+  .footer-nav a:hover{
+  border-bottom: 8px solid palevioletred;
+  transition: 0.5s;
+  
+  }
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid rgba(218, 165, 32, 0.795);
+  background-color: rgba(0, 0, 0, 0.795);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
-body.lightStore .nav-info a{
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+body.lightStore .footer-nav a{
 color: white;
 text-shadow: 2px 2px 4px rgba(255, 217, 0, 0.842);
 border-top: 2px solid rgba(153, 205, 50, 0.774);
@@ -131,16 +154,20 @@ transition: 1s ease-out;
 margin: 0% auto;
 display: flex;
 position: relative;
+width: 20px;
+padding: 5px 10px;
+margin: 5px;
+align-items: center;
+text-align: center;
+justify-content: center;
 font-family: Georgia, 'Times New Roman', Times, serif;
 font-size: 14px;
 color: rgba(180, 153, 1, 0.904);
-left: 0px;
-bottom: 25px;
 margin-bottom: 2px;
 border-radius: 6px;
 background-color: rgba(255, 255, 255, 0.13);
 color: wheat;
-border: none;
+border: 1px solid rgba(135, 206, 250, 0.863);
 text-shadow: 1px 1px 2px yellowgreen;
 cursor: pointer;
 transition: 1s;
@@ -152,12 +179,9 @@ body.lightStore #language-select{
 #voice-search-btn{
 margin: 0% auto;
 background-color: transparent;
-position: relative;
-right: 158px;
-bottom: 34px;
 border-radius: 0px;
 border: none;
-border-right: 2px solid rgba(135, 206, 250, 0.589);
+border-left: 2px solid rgba(135, 206, 250, 0.589);
 cursor: pointer;
 font-size: 24px;
 color: blue;
@@ -173,7 +197,8 @@ transition: 1s;
 #search-bar {
 margin: 0% auto;
 display: flex;
-width: 350px;
+width: 100%;
+margin-right: 5px;
 padding: 6px;
 font-family: Georgia, 'Times New Roman', Times, serif;
 font-size: 20px;
@@ -191,6 +216,16 @@ cursor: pointer;
 background-color: rgba(4, 14, 87, 0.322);
 transition: 0.5s;
 }
+.footer-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Footer-Title{
+  font-size: 16px;
+  color: rgba(90, 67, 8, 0.884);
+  text-shadow: 1px 1px 2px goldenrod;
+}
 body.lightStore #search-bar:focus{
 background-color: rgba(119, 0, 0, 0.267);
 transition: 0.5s;
@@ -207,6 +242,7 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 padding: 10px;
+margin-bottom: 15%;
 }
 
 
@@ -385,7 +421,7 @@ summary{
     text-shadow: 0px 0px 2px gold;
     position: fixed;
     display: flex;
-    top: 170px;
+    top: 80px;
     left: 3px;
     font-size: 25px;
     background-color: black;
@@ -415,7 +451,6 @@ summary:hover{
     color: white;
     text-shadow: 0px 0px 4px gold;
 }
-
 #checkout-btn{
     border: none;
     padding: 5px 10px;
@@ -1383,7 +1418,7 @@ footer{
 
 #HideShow-Btn {
   position: absolute;
-  top: 171px;
+  top: 80px;
   right: 5px;
   width: 50px;
   height: 52px;
@@ -1666,6 +1701,7 @@ label {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     padding: 10px;
+    margin-bottom: 10%;
   }
     h1{
        margin: 0% auto;
@@ -1679,26 +1715,20 @@ label {
     margin: 0% auto;
     min-width: 300px;
   } 
-  
-  #search-bar {
-  margin: 0% auto;
-  display: flex;
-  width: 550px;
-  
-  }
-  #voice-search-btn{
-  margin: 0% auto;
-  position: relative;
-  display: flex;
-  right: 257px;
-  bottom: 35px;
-  }
-  #language-select{
+
+  .Footer-Title{
     margin: 0% auto;
-    position: relative;
-    left: 0px;
-   
+    font-size: 25px;
+    padding: 5px;
+    width: 50%;
+    display: flex;
+    opacity: 80%;
+  }
+  .footer-nav a{
+    width: 100px;
     }
+  
+
   
  
     #song-details{

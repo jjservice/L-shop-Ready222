@@ -96,32 +96,9 @@
 <body>
   <h1 onclick="toggleClassPlayer()">LOLLIP<ion-icon name="color-palette-outline"></ion-icon>P</h1>
     
-
-
-  <!-- Search Bar -->
-  <input type="text" id="search-bar" placeholder=".;.LOLLITA CLUB.;." oninput="searchProducts()">
-  <button id="voice-search-btn" aria-label="Voice Search">🎙️</button>  
   
   <button id="HideShow-Btn"><i class="fas fa-music"></i></button> 
-
-  <!-- Dropdown for language selection -->
-  <select id="language-select">
-    <option value="en-US">English (US)</option>
-     <option value="es-ES">Spanish</option>
-     <option value="fr-FR">French</option>
-     <option value="de-DE">German</option>
-     <option value="it-IT">Italian</option>
-   </select>
-
-   
-  <!-- Navigation Info -->
-  <div class="nav-info">
-    <a href="https://jjservice.github.io/L2/1.html"><ion-icon name="home"></ion-icon></a>
-    <a href="https://jjservice.github.io/L-Club-Store/About.html">About</a>
-    <a href="https://jjservice.github.io/L-Club-Store/ContactForm.html">Contact</a>
-    <a href="https://jjservice.github.io/L-Club-Store/Faq.html">FAQ</a>
-  </div>
-
+  
   <!-- Navigation Section -->
     <details>
       <summary style="z-index: 333;"><i class="fa fa-shopping-cart"></i><span id="cart-item-count">0</span></summary>
@@ -381,7 +358,33 @@ const myButton = document.getElementById("HideShow-Btn");
         });
 
   </script>
-  
+
+  <!-- Fixed footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-name">
+        <h3 class="Footer-Title">LOLLIPOP CLUB</h3>
+      </div>
+      <div class="footer-nav">
+        <a href="https://jjservice.github.io/L2/1.html"><ion-icon name="home"></ion-icon></a>
+        <a href="https://jjservice.github.io/L-Club-Store/About.html">About</a>
+        <a href="https://jjservice.github.io/L-Club-Store/ContactForm.html">Contact</a>
+        <a href="https://jjservice.github.io/L-Club-Store/Faq.html">FAQ</a>
+      </div>
+       <!-- Dropdown for language selection -->
+   <select id="language-select">
+    <option value="en-US">English (US)</option>
+     <option value="es-ES">Spanish</option>
+     <option value="fr-FR">French</option>
+     <option value="de-DE">German</option>
+     <option value="it-IT">Italian</option>
+   </select>
+
+  <input type="text" id="search-bar" placeholder=".;.LOLLITA CLUB.;." oninput="searchProducts()">
+  <button id="voice-search-btn" aria-label="Voice Search">🎙️</button>  
+
+</div>
+  </footer>
   <script src="script.js"></script>
   <script src="Search.js"></script>
    <script src="music.js"></script>
