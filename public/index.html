@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart</title>
+  <title>LOLLIPOP CLUB</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://js.stripe.com/v3/"></script> <!-- Stripe JS -->
@@ -81,6 +81,26 @@
     .prev:hover, .next:hover {
       background-color: rgba(0, 0, 0, 0.8);
     }
+
+
+
+
+    .container4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+
+  .search-bar4 {
+    flex-grow: 1;  /* This allows the search bar to take up the available space */
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;  /* Adds space between the search bar and buttons */
+    display: none;  /* Hide the search bar initially */
+  }
+
     @media (min-width: 768px){
     .modal-content{
       padding-top: 60px;
@@ -90,6 +110,7 @@
       height: auto;
     }
     }
+
 
   </style>
 </head>
@@ -366,25 +387,31 @@ const myButton = document.getElementById("HideShow-Btn");
         <h3 class="Footer-Title">LOLLIPOP CLUB</h3>
       </div>
       <div class="footer-nav">
-        <a href="https://jjservice.github.io/L2/1.html"><ion-icon name="home"></ion-icon></a>
-        <a href="https://jjservice.github.io/L-Club-Store/About.html">About</a>
-        <a href="https://jjservice.github.io/L-Club-Store/ContactForm.html">Contact</a>
-        <a href="https://jjservice.github.io/L-Club-Store/Faq.html">FAQ</a>
-      </div>
-       <!-- Dropdown for language selection -->
-   <select id="language-select">
+        
+             <!-- Dropdown for language selection -->
+       <select id="language-select">
     <option value="en-US">English (US)</option>
      <option value="es-ES">Spanish</option>
      <option value="fr-FR">French</option>
      <option value="de-DE">German</option>
      <option value="it-IT">Italian</option>
-   </select>
+       </select>
 
-  <input type="text" id="search-bar" placeholder=".;.LOLLITA CLUB.;." oninput="searchProducts()">
-  <button id="voice-search-btn" aria-label="Voice Search">🎙️</button>  
+ 
+        <input class="search-bar4" type="text" id="search-bar" placeholder=".;.LOLLITA CLUB.;." oninput="searchProducts()" style="display: none;">
+        <button class="button4" id="Icon-Search-Footer" onclick="toggleSearchBar()"><i class="fas fa-search search-icon"></i></button>
+        <button id="voice-search-btn" aria-label="Voice Search">🎙️</button>  
+      
 
-</div>
+        <a href="https://jjservice.github.io/L2/1.html" class="button4"><ion-icon name="home"></ion-icon></a>
+        <a href="https://jjservice.github.io/L-Club-Store/About.html" class="button4">About</a>
+        <a href="https://jjservice.github.io/L-Club-Store/ContactForm.html" class="button4">Contact</a>
+        <a href="https://jjservice.github.io/L-Club-Store/Faq.html" class="button4">FAQ</a>
+      </div>
+  
+
   </footer>
+
   <script src="script.js"></script>
   <script src="Search.js"></script>
    <script src="music.js"></script>
@@ -393,3 +420,5 @@ const myButton = document.getElementById("HideShow-Btn");
 
 </body>
 </html>
+
+

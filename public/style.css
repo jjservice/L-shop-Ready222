@@ -113,8 +113,10 @@ width: 100%;
 
 
   .footer-nav a:hover{
-  border-bottom: 8px solid palevioletred;
+  transform: scale(1.10);
+  box-shadow: 0px 2px 6px lightskyblue;
   transition: 0.5s;
+  opacity: 100%;
   
   }
 
@@ -139,6 +141,32 @@ width: 100%;
   align-items: center;
   width: 100%;
   max-width: 100%;
+}
+
+#Icon-Search-Footer{
+  background:transparent;
+  border: none;
+  width: 15%;
+  padding: 5px;
+  margin-right: 5px;
+  color: yellow;
+  text-shadow: 2px 2px 4px darkblue;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(135, 206, 250, 0.548);
+  border-radius: 8px;
+}
+#Icon-Search-Footer i{
+  margin: 0% auto;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: rgba(184, 13, 64, 0.479);
+  text-shadow: 1px 1px 2px rgba(218, 165, 32, 0.589);
+  
+}
+#Icon-Search-Footer:hover{
+  transform: scale(1.10);
+  transition: 0.5s;
 }
 
 body.lightStore .footer-nav a{
@@ -1273,34 +1301,6 @@ body.lightPlayer #language-selector option{
 }
 
 
-footer{
-  margin: 0% auto;
-  flex-direction: column;
-  bottom: 0%;
-  left: 0;
-  position: fixed;
-  align-items: center;
-  width: 100%;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgb(48, 47, 47);
-  justify-content: center;
-  align-items: center;
-   }
-   footer p{
-    margin: 0% auto;
-    width: 250px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.116);
-    padding: 2.5px;
-    border-radius: 20px;
-    color: rgb(102, 100, 100);
-    text-shadow: none;
-    text-align: center;
-   }
-   footer ion-icon{
-    color: rgba(255, 217, 0, 0.411);
-   }
 
 
 
@@ -1751,7 +1751,11 @@ label {
     font-size: 30px;
   }
 
+  #Icon-Search-Footer{
+    width: 100%;
+  }
 
+  
 
 }
 

@@ -115,3 +115,27 @@
       }
     }
 
+
+
+    //////Search Button Push/////
+
+    function toggleSearchBar() {
+      const searchBar = document.querySelector('.search-bar4');
+      const buttons = document.querySelectorAll('.button4:not([onclick="toggleSearchBar()"])'); // All buttons except the toggle button
+      const showSearchButton = document.querySelector('.button4[onclick="toggleSearchBar()"]');
+      
+      if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+          searchBar.style.display = 'block';  // Show the search bar
+          
+          // Hide all buttons except the "Show Search" button
+          buttons.forEach(button => button.style.display = 'none');
+          showSearchButton.innerHTML = '<i class="fas fa-times"></i>'; // Change button text
+      } else {
+          searchBar.style.display = 'none';  // Hide the search bar
+          
+          // Show all buttons again
+          buttons.forEach(button => button.style.display = 'inline-block');
+          showSearchButton.innerHTML = '<i class="fas fa-search"></i>'; 
+      }
+  }
+   
