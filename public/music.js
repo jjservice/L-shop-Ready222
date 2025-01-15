@@ -18,7 +18,7 @@ const tracks = [
         name: "Se Dejaron Ver",
         artist: "Yaisel LM Ft El Fother",
         img: "./music/elfotheryasielsedejaronverPic.jpg",
-        music: "./Yasiel LM x El Fother - Se Dejaron Ver.mp3"
+        music: "./music/Yasiel LM x El Fother - Se Dejaron Ver.mp3"
     },
     {   id: 2,
         name: "Que Cabra Mete Tu",
@@ -27,29 +27,29 @@ const tracks = [
         music: "./music/El Fother - Que Cabra Mete Tu.mp3"
     },
     {   id: 3,
-        name: "TOUCHDOWN",
-        artist: "Messiah x Myke Towers",
-        img: "./music/MessiahMikeTouchDownPic.jpg",
-        music: "./music/Messiah, Myke Towers - TOUCHDOWN.mp3"
-    },
-    {   id: 4,
         name: "Pa que tú me ronca",
         artist: "Químico ultra Mega x Danger",
         img: "./music/QUIMICOPIC.jpg",
         music: "./music/Químico ultra Mega x Danger- Pa que tú me ronca.mp3"
     },
-    {   id: 5,
+    {   id: 4,
         name: "SEDA",
         artist: "Bad Bunny x Bryant Myers",
         img: "./music/BadBunnyBryinSedaPic.jpg",
-        music: "Bad Bunny, Bryant Myers - Seda.mp3"
+        music: "./music/Bad Bunny, Bryant Myers - Seda.mp3"
     },
-    {   id: 6,
+    {   id: 5,
         name: "Sauce Boy",
         artist: "Eladio Carrion",
         img: "./music/EladioCarrionSauceBoyPic.jpg",
         music: "./music/Eladio Carrión - SAUCEBOY (Freestyle).mp3"
     },
+    {   id: 6,
+        name: "TOUCHDOWN",
+        artist: "Messiah x Myke Towers",
+        img: "./music/MessiahMikeTouchDownPic.jpg",
+        music: "./music/Messiah, Myke Towers - TOUCHDOWN.mp3"
+    }
 ];
 
 let currentTrackIndex = 0;
