@@ -146,7 +146,7 @@ width: 100%;
 #Icon-Search-Footer{
   background:transparent;
   border: none;
-  width: 100%;
+  width: 10%;
   margin-right: 5px;
   color: rgb(158, 136, 11);
   text-shadow: 0px 0px 4px goldenrod;
@@ -159,7 +159,6 @@ width: 100%;
   font-size: 25px;
   cursor: pointer;
   transition: 0.5s;
-  
   border-bottom: 2px solid rgba(135, 206, 250, 0.548);
   width: 40px;
   border-radius: 8px;
@@ -268,7 +267,7 @@ transition: 0.5s;
   align-items: center;
   gap: 10px;
 }
-.Footer-Title{
+#Footer-Title{
   font-size: 20px;
   color: rgba(90, 67, 8, 0.884);
   text-shadow: 1px 1px 2px goldenrod;
@@ -1833,6 +1832,9 @@ label {
   }
   #language-select{
   width: 40px;
+}
+#voice-search-btn{
+  margin-left: 2px;
 }
 
 #HideShow-Btn{
