@@ -92,7 +92,6 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(245, 245, 245, 0.842);
       color: black;
       border-radius: 20px;
       padding: 20px;
@@ -100,12 +99,20 @@
       z-index: 1000;
     }
     .modal-ad p{
-      color: black;
+      font-size: 25px;
+      color: white;
+      text-shadow: 2px 2px 4px gold;
+      margin-bottom: 15px;
     }
     .modal-ad button{
       border: none;
       padding: 5px 10px;
-      border-radius: 10px
+      border-radius: 10px;
+      background-color: transparent;
+      
+      color: red;
+      font-size: 25px;
+      box-shadow: 0px 2px 6px black;
 
     }
 
@@ -125,10 +132,11 @@
     .Open-ad-image img{
       margin: 0% auto;
       border: 2px solid lightskyblue;
-      box-shadow: 0px 2px 6px rgba(135, 206, 250, 0.795);
-      width: 150px;
-      height: 150px;
+      box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.925);
+      width: 100%;
+      height: auto;
       border-radius: 20px;
+      margin-bottom: 10px;
 
     }
   
@@ -155,6 +163,15 @@
     }
     .modal-content img {
       width: 400px;
+      height: auto;
+    }
+    .modal-ad {
+      width: 500px;
+      height: auto;
+    }
+    .Open-ad-image img{
+      margin: 0% auto;
+      width: 500px;
       height: auto;
     }
     }
@@ -516,8 +533,8 @@ const myButton = document.getElementById("HideShow-Btn");
     <div class="Open-ad-image">
     <a href="#"><img src="MonkeyDesignGif.gif" alt=""></a>
   </div>
-  <p>Click!</p>
-    <button onclick="closeModalad()">Close</button>
+  <p>Click Now!</p>
+    <button onclick="closeModalad()"><i class="fa fa-times"></i></button>
   </div>
 
   <script>
