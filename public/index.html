@@ -83,7 +83,34 @@
     }
 
 
+      /* Modal styles */
+      .modal-ad{
+      margin: 0% auto;
+      width: 80%;
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(245, 245, 245, 0.842);
+      color: black;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
 
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+  
 
     .container4 {
     display: flex;
@@ -247,13 +274,56 @@
   <ul class="product-List">
 
     <div class="product">
+
+      <img src="Xbox-Microsoft-Xbox-Series-S-512GB-Pic1.jpeg" alt="Nike Air Force 1" 
+      onclick="openModal(
+        [
+          'Xbox-Microsoft-Xbox-Series-S-512GB-Pic1.jpeg',
+          'Microsoft-Xbox-Series-S-512GB-PIC2.webp', 
+          'Microsoft-Xbox-Series-S-512GB-PIC3.webp',
+          'Microsoft-Xbox-Series-S-512GB-PIC4.webp', 
+          'Microsoft-Xbox-Series-S-512GB-PIC5.webp'
+        ])">
+
+      <h3>Microsoft Xbox - Series S 512GB</h3>
+      <p class="size-tag">512GB</p>
+      <p id="Price-tag">$399.99</p>
+      <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="1">
+      <p id="in-Stock">In Stock: <span id="stock2">1</span></p>
+      <button class="buy-now" data-product-id="1" data-price="399.99" data-name="Microsoft Xbox - Series S 512GB">ADD TO CART</button>
+    </div>
+
+
+    <div class="product">
+
+      <img src="Sony-PlayStation-5-Slim-Console-Digital-Edition-PIC1.jpg" alt="Nike Air Force 1" 
+      onclick="openModal(
+        [
+          'Sony-PlayStation-5-Slim-Console-Digital-Edition-PIC1.jpg', 
+          'Sony-PlayStation-5-Slim-Console-Digital-Edition-PIC2.jpg',
+          'Sony-PlayStation-5-Slim-Console-Digital-Edition-PIC3.jpg', 
+          'Sony-PlayStation-5-Slim-Console-Digital-Edition-PIC4.jpg',
+          'Sony-PlayStation-5-Slim-Console-Digital-Edition-PIC5.jpg'
+          
+        ])">
+
+      <h3>Sony PlayStation 5 - Slim Console</h3>
+      <p class="size-tag">Digital Edition</p>
+      <p id="Price-tag">$499.99</p>
+      <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="2">
+      <p id="in-Stock">In Stock: <span id="stock2">1</span></p>
+      <button class="buy-now" data-product-id="2" data-price="499.99" data-name="Sony PlayStation 5 - Slim Console Digital Edition">ADD TO CART</button>
+    </div>
+    
+
+    <div class="product">
       <img src="NikeAirForce1'07-mainPic.png" alt="Nike Air Force 1" onclick="openModal(['AirforceWhitePi1.png', 'AirforceWhitePi3.png', 'AirforceWhitePi4.png'])">
       <h3>Nike Air Force 1 '07 - Men's Shoes - Sneakers</h3>
       <p class="size-tag">Size: M-6 / W-7.5</p>
       <p id="Price-tag">$99.99</p>
-      <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="1">
+      <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="3">
       <p id="in-Stock">In Stock: <span id="stock2">1</span></p>
-      <button class="buy-now" data-product-id="1" data-price="99.99" data-name="Nike Air Force 1 '07 - SMALL">ADD TO CART</button>
+      <button class="buy-now" data-product-id="3" data-price="99.99" data-name="Nike Air Force 1 '07 - SMALL">ADD TO CART</button>
     </div>
     
     <div class="product">
@@ -261,9 +331,9 @@
       <h3>Razer Kishi for iPhone - Universal Gaming Controller for iOS X-LARGE</h3>
       <p class="size-tag">- Clickable Analog Thumbsticks<br>- Universal Fit<br>- Ultra-Low Latency Gameplay</p>
       <p id="Price-tag">$59.99</p>
-      <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="2">
+      <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="4">
       <p id="in-Stock">In Stock: <span id="stock2">1</span></p>
-      <button class="buy-now" data-product-id="2" data-price="59.99" data-name="Razer Kishi - LARGE">ADD TO CART</button>
+      <button class="buy-now" data-product-id="4" data-price="59.99" data-name="Razer Kishi - LARGE">ADD TO CART</button>
     </div>
     
     <div class="product">
@@ -280,9 +350,9 @@
       <h3>Versace Chain Reaction-Sneaker</h3>
       <p class="size-tag">Multicolor BNWB-Size: 45</p>
       <p id="Price-tag">$1,199.99</p>
-      <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="3">
+      <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="5">
       <p id="in-Stock">In Stock: <span id="stock2">1</span></p>
-      <button class="buy-now" data-product-id="3" data-price="1199.99" data-name="Versace-Chain-Reaction-Sneaker-Multicolor-Size45-BNWB">ADD TO CART</button>
+      <button class="buy-now" data-product-id="5" data-price="1199.99" data-name="Versace-Chain-Reaction-Sneaker-Multicolor-Size45-BNWB">ADD TO CART</button>
     </div>
 
 
@@ -303,9 +373,9 @@
       <h3>A Cosmos Watch with Nebula Hues</h3>
       <p class="size-tag"> Casio G-SHOCK-MTGB3000DN1A</p>
       <p id="Price-tag">$1,250.00</p>
-      <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="4">
+      <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="6">
       <p id="in-Stock">In Stock: <span id="stock2">1</span></p>
-      <button class="buy-now" data-product-id="4" data-price="1249.99" data-name="A-Cosmos-Watch-with-Nebula-Hues-Casio-G-SHOCK-MTGB3000DN1A">ADD TO CART</button>
+      <button class="buy-now" data-product-id="6" data-price="1249.99" data-name="A-Cosmos-Watch-with-Nebula-Hues-Casio-G-SHOCK-MTGB3000DN1A">ADD TO CART</button>
     </div>
     
     <!-- Add more products as needed -->
@@ -417,6 +487,35 @@ const myButton = document.getElementById("HideShow-Btn");
   
 
   </footer>
+
+
+  <!-- Modal HTML -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-ad" id="modal-ad">
+    <h2>Welcome to the Modal</h2>
+    <p>This modal will appear 5 seconds after the page loads.</p>
+    <button onclick="closeModalad()">Close</button>
+  </div>
+
+  <script>
+    // Function to open the modal
+    function openModalad() {
+      document.getElementById('modal-ad').style.display = 'block';
+      document.getElementById('modalOverlay').style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closeModalad() {
+      document.getElementById('modal-ad').style.display = 'none';
+      document.getElementById('modalOverlay').style.display = 'none';
+    }
+
+    // Wait for window load, then set the timeout for 5 seconds
+    window.onload = function() {
+      setTimeout(openModalad, 3000); // 5000ms = 5 seconds
+    }
+  </script>
+
 
   <script src="script.js"></script>
   <script src="Search.js"></script>
