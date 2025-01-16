@@ -99,6 +99,15 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       z-index: 1000;
     }
+    .modal-ad p{
+      color: black;
+    }
+    .modal-ad button{
+      border: none;
+      padding: 5px 10px;
+      border-radius: 10px
+
+    }
 
     .modal-overlay {
       display: none;
@@ -109,6 +118,18 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.5);
       z-index: 999;
+    }
+    .Open-ad-image{
+      margin: 0% auto;
+    }
+    .Open-ad-image img{
+      margin: 0% auto;
+      border: 2px solid lightskyblue;
+      box-shadow: 0px 2px 6px rgba(135, 206, 250, 0.795);
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
+
     }
   
 
@@ -492,8 +513,10 @@ const myButton = document.getElementById("HideShow-Btn");
   <!-- Modal HTML -->
   <div class="modal-overlay" id="modalOverlay"></div>
   <div class="modal-ad" id="modal-ad">
-    <h2>Welcome to the Modal</h2>
-    <p>This modal will appear 5 seconds after the page loads.</p>
+    <div class="Open-ad-image">
+    <a href="#"><img src="MonkeyDesignGif.gif" alt=""></a>
+  </div>
+  <p>Click!</p>
     <button onclick="closeModalad()">Close</button>
   </div>
 
