@@ -1,30 +1,25 @@
 const express = require('express');
 const Stripe = require('stripe');
 require('dotenv').config(); // Load the environment variables from the .env file
-
-const stripe = Stripe(process.env.STRIPE_SECRET_KEY); // Access Stripe key from .env
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');// Access Stripe key from .env
 const app = express();
+const paypal = require('@paypal/checkout-server-sdk');
 
-
-
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY); 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
 
+// Middleware to parse JSON bodies (Express has built-in JSON middleware from v4.16+)
+app.use(express.json());
 
-const paypal = require('@paypal/checkout-server-sdk');
+// PayPal setup using environment variables (ensure you add these keys to your .env file)
+const clientId = process.env.PAYPAL_CLIENT_ID;
+const clientSecret = process.env.PAYPAL_CLIENT_SECRET;
 
-// Use body parser middleware to parse JSON bodies
-app.use(bodyParser.json());
-
-// PayPal environment setup (Sandbox mode)
-const paypalClientId = process.env.PAYPAL_CLIENT_ID; // PayPal client ID from .env
-const paypalSecret = process.env.PAYPAL_SECRET; // PayPal secret key from .env
-
-// Your PayPal environment configuration can now use these values
-const environment = new paypal.core.SandboxEnvironment(paypalClientId, paypalSecret);
-const paypalClient = new paypal.core.PayPalHttpClient(environment);
+// Set up PayPal environment
+let environment = new paypal.core.SandboxEnvironment(clientId, clientSecret);
+let client = new paypal.core.PayPalHttpClient(environment);
 
 // PayPal Payment Capture Route (POST)
 app.post('/paypal-payment-success', async (req, res) => {
@@ -41,9 +36,9 @@ app.post('/paypal-payment-success', async (req, res) => {
 
     try {
         // Execute the capture request with PayPal
-        const capture = await paypalClient.execute(request);  // Use paypalClient instead of client
+        const capture = await client.execute(request); // Use the correct client here
         console.log('Capture successful:', capture.result);
-        
+
         // Send capture result back to frontend
         res.json(capture.result);
     } catch (err) {
@@ -59,6 +54,9 @@ app.post('/paypal-payment-success', async (req, res) => {
         res.status(500).send('Payment capture failed');
     }
 });
+
+
+
 
 
 
