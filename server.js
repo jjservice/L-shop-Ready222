@@ -11,6 +11,60 @@ const app = express();
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
+
+
+const paypal = require('@paypal/checkout-server-sdk');
+
+// Use body parser middleware to parse JSON bodies
+app.use(bodyParser.json());
+
+// PayPal environment setup (Sandbox mode)
+const paypalClientId = process.env.PAYPAL_CLIENT_ID; // PayPal client ID from .env
+const paypalSecret = process.env.PAYPAL_SECRET; // PayPal secret key from .env
+
+// Your PayPal environment configuration can now use these values
+const environment = new paypal.core.SandboxEnvironment(paypalClientId, paypalSecret);
+const paypalClient = new paypal.core.PayPalHttpClient(environment);
+
+// PayPal Payment Capture Route (POST)
+app.post('/paypal-payment-success', async (req, res) => {
+    const { orderId, payerId } = req.body;
+
+    // Validate incoming data
+    if (!orderId || !payerId) {
+        return res.status(400).send('Missing orderId or payerId');
+    }
+
+    // Create the PayPal OrdersCaptureRequest to capture payment
+    const request = new paypal.orders.OrdersCaptureRequest(orderId);
+    request.requestBody({});
+
+    try {
+        // Execute the capture request with PayPal
+        const capture = await paypalClient.execute(request);  // Use paypalClient instead of client
+        console.log('Capture successful:', capture.result);
+        
+        // Send capture result back to frontend
+        res.json(capture.result);
+    } catch (err) {
+        console.error('Error capturing PayPal payment:', err);
+        console.error('Error details:', err.details);  // Log detailed error if available
+
+        // Handle specific errors from PayPal API
+        if (err.statusCode === 400) {
+            return res.status(400).send('Bad Request: ' + err.message);
+        }
+
+        // Catch any other errors
+        res.status(500).send('Payment capture failed');
+    }
+});
+
+
+
+
+
+
 app.post('/create-checkout-session', async (req, res) => {
   try {
     const { items } = req.body;

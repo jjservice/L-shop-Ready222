@@ -200,6 +200,53 @@
       <div id="cart-items"></div>
       <p id="cart-total" style="color: white;">Total: $0.00</p>
     <button id="checkout-btn" style="display:none;">Proceed to Checkout</button>
+    <div id="paypal-button-container"></div>
+    <script src="https://www.paypal.com/sdk/js?client-id=AbbyrNrXHuoJVXr9EjUW6eHyDtOOAafxQT1a40lOrWVKpNZDx7cq_FxRnIvXRbiApi0nEKnPEB2PHae1&components=buttons"></script>
+  
+    <script>
+paypal.Buttons({
+    createOrder: function(data, actions) {
+        // Calculate cart total dynamically here
+        const cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+
+        return actions.order.create({
+            purchase_units: [{
+                amount: {
+                    value: cartTotal.toFixed(2)  // Use the dynamically calculated cart total
+                }
+            }]
+        });
+    },
+    onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+            fetch('/paypal-payment-success', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    orderId: data.orderID,
+                    payerId: data.payerID
+                })
+            })
+            .then(response => response.json())
+            .then(result => {
+                console.log('Payment successful!', result);
+                window.location.href = '/success';  // Redirect to success page
+            })
+            .catch(error => {
+                console.error('Error during PayPal payment capture', error);
+                alert('Payment failed! Please try again.');
+            });
+        });
+    },
+    onError: function(error) {
+        console.error('Error during PayPal payment', error);
+        alert('An error occurred. Please try again later.');
+    }
+}).render('#paypal-button-container');
+    </script>
+  
   </div>
   </details>
 
