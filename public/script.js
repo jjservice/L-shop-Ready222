@@ -55,6 +55,9 @@ function updateCart() {
   const checkoutBtn = document.getElementById('checkout-btn');
   checkoutBtn.style.display = cart.length > 0 ? 'inline-block' : 'none';
 
+  const payPal = document.getElementById('paypal-button-container');
+  payPal.style.display = cart.length > 0 ? 'inline-block' : 'none';
+
   // Update the cart item count indicator
   document.getElementById('cart-item-count').textContent = totalItems;
 }
